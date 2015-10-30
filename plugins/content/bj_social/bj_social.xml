@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content">
+	<name>Content - BJ Social</name>
+	<author>The ByJoomla Team</author>
+	<creationDate>December 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2011 BYJOOMLA.COM. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@byjoomla.com</authorEmail>
+	<authorUrl>byjoomla.com</authorUrl>
+	<version>1.6.1</version>
+	<description>ByJoomla Plugin: Social integration</description>
+	<files>
+		<filename plugin="bj_social">bj_social.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+		<field name="link" type="radio" default="0" label="Like/Tweet URL" description="Which URL to like/tweet">
+			<option value="0">Article link</option>
+			<option value="1">Page link</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="Facebook Like parameters" description="" />
+		<field name="show_facebook" type="radio" default="1" label="Show Facebook Like button?" description="Show Facebook Like button?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="codetype" type="radio" default="XFBML" label="Plugin code" description="Plugin code">
+			<option value="XFBML">XFBML (javascript)</option>
+			<option value="iframe">iframe</option>
+		</field>
+		<field name="position" type="list" default="1" label="Like Button position" description="Determines the position of button in article">
+			<option value="1">Before content</option>
+			<option value="2">After content</option>
+	   </field>
+		<field name="exclude_cat" type="text" default="" label="Exclude categories" description="List of category Ids in which 'Like' button will not be inserted, seperated by comma" />
+		<field name="exclude_article" type="text" default="" label="Exclude articles" description="List of article Ids in which 'Like' button will not be inserted, seperated by comma" />
+	   <field name="layout" type="list" default="standard" label="Layout Style" description="Determines the size and amount of social context next to the button">
+			<option value="standard">standard</option>
+			<option value="button_count">button_count</option>
+			<option value="box_count">box_count</option>
+	   </field>
+	   <field name="showface" type="list" default="true" label="Show Faces" description="Show profile pictures below the button">
+			<option value="true">Yes</option>
+			<option value="false">No</option>
+		</field>
+		<field name="width" type="text" default="300" label="Width" description="The width of the facebook plugin, in pixels" />
+		<field name="verb" type="list" default="like" label="Verb to display" description="The verb to display in the button. Currently only 'like' and 'recommend' are supported">
+			<option value="like">like</option>
+			<option value="recommend">recommend</option>
+		</field>
+		<field name="font" type="list" default="" label="Font" description="The font of the plugin">
+			<option value=""></option>
+			<option value="arial">arial</option>
+			<option value="lucida grande">lucida grande</option>
+			<option value="segoe ui">segoe ui</option>
+			<option value="tahoma">tahoma</option>
+			<option value="trebuchet ms">trebuchet ms</option>
+			<option value="verdana">verdana</option>
+		</field>
+		<field name="color" type="list" default="light" label="Color Scheme" description="The color scheme of the plugin">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="Tweeter Tweet button" description="" />
+		<field name="show_tweet" type="radio" default="1" label="Show Tweeter Tweet button?" description="Show Tweeter Tweet button?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>		
+		<field name="tweet_button" type="radio" default="horizontal" label="Tweet button type" description="Tweet button type">
+			<option value="vertical">Vertical count</option>
+			<option value="horizontal">Horizontal count</option>
+			<option value="none">No count</option>
+		</field>
+		<field name="tweet_text" type="text" default="" label="Tweet text" description="This is the text that people will include in their Tweet when they share from your website. Leave blank if you want to use the title of the page the button is on" />
+		<field name="tweet_lang" type="list" default="" label="Tweet language" description="This is the language that the button will render in on your website. People will see the Tweet dialog in their selected language for Twitter.com">
+			<option value="">English</option>
+			<option value="fr">French</option>
+			<option value="de">German</option>
+			<option value="it">Italian</option>
+			<option value="ja">Japanese</option>
+			<option value="ko">Korean</option>
+			<option value="ru">Russian</option>
+			<option value="es">Spanish</option>
+			<option value="tr">Turkish</option>
+		</field>
+	</fieldset>
+
+		</fields>
+	</config>
+</extension>

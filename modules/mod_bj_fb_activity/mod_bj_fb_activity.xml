@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.1" client="site">
+    <name>BJ FB Activity</name>
+    <creationDate>5th March 2013</creationDate>
+    <author>ByJoomla.com</author>
+    <copyright>(C) 2008-2011 ByJoomla.com. All rights reserved.</copyright>
+    <authorEmail>admin@byjoomla.com</authorEmail>
+    <authorUrl>http://www.byjoomla.com</authorUrl>
+    <version>1.6.1</version>
+    <description>
+    	<![CDATA[
+    	Facebook intergration: Activity box
+	]]>
+    </description>
+     <files>         
+         <filename module="mod_bj_fb_activity">mod_bj_fb_activity.php</filename>
+         <filename>tmpl/default.php</filename>
+		 <filename>tmpl/index.html</filename>
+		 <filename>index.html</filename>
+		 <filename>helper.php</filename>
+		 <filename >elements/color.php</filename>
+		 <filename >media/js/jscolor/jscolor.js</filename>
+		 <filename >media/js/jscolor/arrow.gif</filename>
+		 <filename >media/js/jscolor/cross.gif</filename>
+		 <filename >media/js/jscolor/hs.png</filename>
+		 <filename >media/js/jscolor/hv.png</filename>
+		 <filename >media/js/jscolor/index.html</filename>
+     </files>
+	 <config>
+		<fields name="params" addfieldpath="/modules/mod_bj_fb_activity/elements">
+			<fieldset name="basic">
+    	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<field name="codetype" type="radio" default="XFBML" label="Plugin code" description="Plugin code">
+			<option value="XFBML">XFBML (javascript)</option>
+			<option value="iframe">iframe</option>
+		</field>
+		<field name="domain" type="text" default="" label="Domain" description="The domain for which to show recommendations (includes 'http://'). Defaults to the domain the plugin is on" />
+		<field name="showheader" type="list" default="false" label="Show Header" description="Show the facebook header of the plugin">
+			<option value="true">Yes</option>
+			<option value="false">No</option>
+		</field>
+        <field name="font" type="list" default="" label="Font" description="The font of the plugin">
+			<option value=""></option>
+			<option value="arial">arial</option>
+			<option value="lucida grande">lucida grande</option>
+			<option value="segoe ui">segoe ui</option>
+			<option value="tahoma">tahoma</option>
+			<option value="trebuchet ms">trebuchet ms</option>
+			<option value="verdana">verdana</option>
+		</field>
+		<field name="color" type="list" default="light" label="Color Scheme" description="The color scheme of the plugin">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</field>
+		<field name="border_color" type="color" default="CCCCCC" label="Border Color (hexa)" description="The border color of the plugin" />
+		<field name="width" type="text" default="200" label="Width" description="The width of the plugin, in pixels" />
+		<field name="height" type="text" default="300" label="Height" description="The height of the plugin, in pixels" />
+		<field name="recommend" type="radio" default="1" label="Show recommendations" description="Show recommendations">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+    </fieldset>
+		</fields>		
+	</config>
+</extension>

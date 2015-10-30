@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>1sr_170_1</name>
+	<creationDate>26.10.2012</creationDate>
+	<author>&lt;a href="http://www.1sr.de" target="_blank"&gt;&lt;strong&gt;1sr.de&lt;/strong&gt;&lt;/a&gt;</author>
+	<authorEmail>info@1sr.de</authorEmail>
+	<authorUrl>http://www.1sr.de</authorUrl>
+	<copyright>Copyright (C) 2011 1sr.de, Inc. All rights reserved.</copyright>
+	<license>Creative Commons BY-SA license</license>
+	<version>1.0.1</version>
+	<description>TPL_1SR_170_1_TEMPLATE_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<!--folder>language</folder-->
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<!--filename>component.php</filename-->
+		<!--filename>error.php</filename-->
+	</files>
+	
+	<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+	</positions>
+	
+	<!-- For core templates, we also install/uninstall the language files in the core language folders. -->
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_1sr_170_1_template.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_1sr_170_1_template.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_1sr_170_1_template.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_1sr_170_1_template.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="predefinedTemplateColor" type="list" default="general5" label="PREDEFINED_TEMPLATE_DESIGN" description="PREDEFINED_TEMPLATE_DESIGN_DESC">
+					<option value="general1">PREDEFINED_TEMPLATE_DESIGN_GENERAL1</option>
+					<option value="general3">PREDEFINED_TEMPLATE_DESIGN_GENERAL3</option>
+					<option value="general2">PREDEFINED_TEMPLATE_DESIGN_GENERAL2</option>
+					<option value="general4">PREDEFINED_TEMPLATE_DESIGN_GENERAL4</option>
+					<option value="general5">PREDEFINED_TEMPLATE_DESIGN_GENERAL5</option>
+				</field>
+				<field name="useCustomTemplateColor" type="list" default="no" label="USE_CUSTOM_TEMPLATE_COLOR" description="USE_CUSTOM_TEMPLATE_COLOR_DESC">
+					<option value="yes">1SR_170_1_TEMPLATE_YES</option>
+					<option value="no">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				
+				<field name="customTemplateColor" type="text" default="#006699" label="CUSTOM_TEMPLATE_COLOR" description="CUSTOM_TEMPLATE_COLOR_DESC" filter="string" />
+				
+				<field name="useCustomTemplateColorGradient" type="list" default="no" label="USE_CUSTOM_TEMPLATE_COLOR_GRADIENT" description="USE_CUSTOM_TEMPLATE_COLOR_GRADIENT_DESC">
+					<option value="yes">1SR_170_1_TEMPLATE_YES</option>
+					<option value="no">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				
+				<field name="customTemplateColor2" type="text" default="#004466" label="CUSTOM_TEMPLATE_COLOR_2" description="CUSTOM_TEMPLATE_COLOR_2_DESC" filter="string" />
+
+				<field name="customLogo" type="media" directory="stories" label="CUSTOM_LOGO" description="CUSTOM_LOGO_DESC" />
+				<field name="showSiteName" type="list" default="yes" label="SHOW_SITE_NAME" description="SHOW_SITE_NAME_DESC">
+					<option value="yes">1SR_170_1_TEMPLATE_YES</option>
+					<option value="no">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				<field name="facebook" type="list" default="off" label="SHOW_FACEBOOK_LINK" description="SHOW_FACEBOOK_LINK_DESC">
+					<option value="on">1SR_170_1_TEMPLATE_YES</option>
+					<option value="off">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				<field name="facebookUrl" type="text" default="" label="FACEBOOK_URL" description="FACEBOOK_URL_DESC" filter="string" />
+				<field name="twitter" type="list" default="off" label="SHOW_TWITTER_LINK" description="SHOW_TWITTER_LINK_DESC">
+					<option value="on">1SR_170_1_TEMPLATE_YES</option>
+					<option value="off">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				<field name="twitterUrl" type="text" default="" label="TWITTER_URL" description="TWITTER_URL_DESC" filter="string" />
+				<field name="showTopNavArrows" type="list" default="yes" label="TOP_NAVIGATION_ARROWS" description="TOP_NAVIGATION_ARROWS_DESC">
+					<option value="yes">1SR_170_1_TEMPLATE_YES</option>
+					<option value="no">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				<field name="topNavSubOpacity" type="text" default="100" label="SUBMENU_OPACITY" description="SUBMENU_OPACITY_DESC" filter="string" />
+				<field name="topNavCloseDelay" type="text" default="800" label="SUB_NAVIGATION_DELAY" description="SUB_NAVIGATION_DELAY_DESC" filter="string" />
+			</fieldset>
+			<fieldset name="advanced">
+				<!--field name="googleCustomSearch" type="list" default="no" label="Use Custom Search" description="Use Google custom search instead off default joomla search (yes/no)">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				<field name="googleCustomSearchSnippet" type="textarea" default="" label="Custom Search Snippet" description="Google custom search snippet and replace all &lt;br/&gt;&quot;&quot;&quot; =&gt; &quot;1srQuot&quot;, &lt;br/&gt;&quot;&lt;&quot; =&gt; &quot;1srLt&quot;, &lt;br/&gt;&quot;&gt;&quot; =&gt; &quot;1srGt&quot;)" filter="string" /-->
+				<field name="googleWebFonts" type="list" default="no" label="USE_GOOGLE_FONTS" description="USE_GOOGLE_FONTS_DESC">
+					<option value="yes">1SR_170_1_TEMPLATE_YES</option>
+					<option value="no">1SR_170_1_TEMPLATE_NO</option>
+				</field>
+				<field name="googleWebFont" type="text" default="Amaranth" label="GOOGLE_WEB_FONT" description="GOOGLE_WEB_FONT_DESC" filter="string" />
+			</fieldset>
+		</fields>
+	</config>	
+</extension>

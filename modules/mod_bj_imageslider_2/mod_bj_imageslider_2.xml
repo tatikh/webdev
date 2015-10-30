@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site">
+    <name>BJ ImageSlider 2 Free</name>
+    <creationDate>12th March 2011</creationDate>
+    <author>The ByJoomla Team</author>
+    <copyright>Free to use.</copyright>
+    <authorEmail>admin@byjoomla.com</authorEmail>
+    <authorUrl>http://byjoomla.com</authorUrl>
+    <version>1.6.0</version>
+    <description>
+    	<![CDATA[
+			BJ! Image Slider 2 Free version (jQuery version). BJ! Image Slider component must be installed first
+    	]]>
+    </description>
+     <files>    
+		 <folder>jscolor</folder>
+		 <folder>elements</folder>
+		 <folder>mod_bj_imageslider</folder>
+		 <folder>themes</folder>
+         <filename module="mod_bj_imageslider_2">mod_bj_imageslider_2.php</filename>
+		 <filename module="mod_bj_imageslider_2">loader.gif</filename>
+     </files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_bj_imageslider_2/elements">
+			<fieldset name="basic">
+    	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />    	
+        <field name="category_id" type="text" default="1" label="Category Id" description="Id of the Category that you want to show" />
+        <field name="ss_width" type="text" default="960" label="SlideShow Width" description="The width of the slideshow (in pixel)" />
+        <field name="ss_height" type="text" default="300" label="SlideShow Height" description="The height of the slideshow (in pixel)" />
+		<field name="ss_gallery_padding" type="text" default="1" label="Gallery border width" description="Gallery border width (in pixel)" />
+        <field name="ss_delay" type="text" default="4000" label="Delay time" description="Delay time (in millisecond)" />
+        <field name="ss_duration" type="text" default="750" label="Duration time" description="Duration time (in millisecond)" />
+		<field name="ss_filmstrip_size" type="text" default="5" label="Filmstrip Size" description="Number of visible navigation buttons" />
+		<field name="ss_frame_gap" type="text" default="8" label="Navigation button margin" description="Navigation button margin (in px)" />
+		<field name="ss_caption_thickness" type="text" default="300" label="Caption Thickness" description="Caption Thickness (in pixels)" />
+		<field name="ss_caption_opacity" type="text" default="0.7" label="Caption Opacity" description="Caption Opacity (0-1)" />
+		<field name="ss_background" type="color" default="333" label="Slideshow background" description="Slideshow background (hexa color)" />
+		<field name="ss_overlay_background" type="color" default="333" label="Slideshow Text Panel background" description="Slideshow Text Panel (image description) background (hexa color)" />
+		<field name="ss_caption" type="radio" default="1" label="Show caption" description="Select whether to show caption of images">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ss_show_next_item_title" type="radio" default="1" label="Show Next Item Title" description="Select whether to show next item title when mouse over on navigation buttons">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ss_show_title_in_overlay" type="radio" default="0" label="Show caption title" description="Show Item title on Caption panel">
+			<option value="1">No</option>
+			<option value="0">Yes</option>
+		</field>
+		<field name="ss_pause_on_hover" type="radio" default="0" label="Pause on Hover" description="Select whether to pause the animation when mouse over panels">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ss_controller" type="radio" default="1" label="Show Play/Pause button" description="Select whether to show controller buttons">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ss_panel_gradient" type="radio" default="0" label="Show panel gradient" description="Select whether to show panel gradient (enable this fieldter in PRO version)">
+			<option value="0">No</option>
+		</field>		
+		<field name="ss_auto_hide_filmstrip" type="radio" default="0" label="Auto hide filmstrip" description="Auto hide filmstrip when mouse out the panels">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ss_paused" type="radio" default="1" label="Auto start slideshow" description="Auto start slideshow when it is loaded?">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		<field name="ss_filmstrip" type="radio" default="1" label="Show FilmStrip" description="Select whether to show the filmstrip">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ss_filmstrip_position" type="radio" default="bottom" label="FilmStrip Position" description="Select Filstrip Position (more position in PRO version)">
+			<option value="bottom">Bottom</option>
+		</field>
+		<field name="ss_overlay_position" type="radio" default="right" label="Caption Position" description="Select caption position (more position in PRO version)">
+			<option value="right">Right</option>
+		</field>
+		<field name="ss_image_transition_effect" type="list" default="blur" label="Image Transition effect" description="Image Transition effect (more effect in PRO version">
+			<option value="blur">blur</option>
+		</field>
+		<field name="ss_text_transition_effect" type="list" default="blur" label="Text Transition effect" description="Text Transition effect (more effect in PRO version)">
+			<option value="blur">blur</option>
+		</field>
+		<field name="ss_panel_on_click" type="list" default="none" label="Panel On Click" description="What happens when user click on main image? (enable this fieldeter in PRO version">
+			<option value="none">Do nothing</option>
+		</field>
+		<field name="ss_easing_method" type="list" default="swing" label="Transition Easing Method" description="Transition Easing Method (more method in PRO version)">
+			<option value="swing">swing</option>
+		</field>
+		<field name="need_jquery" type="radio" default="0" label="Need JQuery?" description="Choose 'No' if you are sure that JQuery is loaded elsewhere. Choose 'Yes' if you are sure that JQuery is not loaded elsewhere">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+    </fieldset>
+		</fields>		
+	</config>
+</extension>

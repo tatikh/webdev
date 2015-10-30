@@ -1,0 +1,116 @@
+/*
+
+	GalleryView Stylesheet
+	
+	Use the CSS rules below to modify the look of your gallery.
+	
+	To create additional rules, use the markup below as a guide to GalleryView's architecture.
+	
+	<div class="gallery">
+		<div class="panels">
+			<div class="panel">
+				<img src="path/to/image.jpg" />
+				<div class="panel-overlay" style="display:none">
+					...overlay content...
+				</div>
+			</div>
+			...
+			...
+		</div>
+		<div class="strip_wrapper">
+			<ul class="filmstrip">
+				<li class="frame current">
+					<div class="img_wrap"><img src="path/to/thumbnail.jpg" /></div>
+					<div class="caption">Image title here</div>
+				</li>
+				<li class="frame">
+					<div class="img_wrap"><img src="path/to/thumbnail.jpg" /></div>
+					<div class="caption">Image title here</div>
+				</li>
+			</ul>
+		</div>
+		<div class="overlay-content-panel"></div>
+		<div class="overlay-background"></div>
+		<div class="strip_background"></div>
+		<div class="gallery_gradient"></div>
+		<div class="next_title"></div>
+		<img class="nav-next"/>
+		<img class="nav-prev"/>
+		<img class="nav-next-overlay"/>
+		<img class="nav-prev-overlay"/>
+		<img class="controller"/>
+		<div class="pointer"></div>
+	</div>
+*/
+
+/* GALLERY LIST */
+/* GALLERY CONTAINER */
+.gallery{ overflow:hidden; position:relative}
+
+/* LOADING BOX */
+.gallery .loader { background: url(../../../../loader.gif) center center no-repeat}
+
+/* GALLERY PANELS */
+.gallery  .panel{overflow:hidden}
+
+/* DEFINE HEIGHT OF PANEL OVERLAY */
+/* NOTE - It is best to define padding here as well so overlay and background retain identical dimensions */
+.gallery  .panel .panel-overlay,
+.gallery  .overlay-background {padding:15px}
+
+/* OVERLAY BACKGROUND */
+.gallery  .overlay-background {color:#fff }
+.gallery  .overlay-background-left{ background:url('../../../../themes/overlay_border_left.png') left repeat-y; border-left:1px solid #000}
+.gallery  .overlay-background-right{ background:url('../../../../themes/overlay_border_right.jpg') right repeat-y;border-right:1px solid #000}
+
+/* PANEL OVERLAY CONTENT */
+.gallery  .panel .panel-overlay { color: white;}
+.gallery  .panel .panel-overlay a { color: white; text-decoration: underline; font-weight: bold; }
+.gallery .overlay-content-panel{font-family:Tahoma;color:#FFF}
+.gallery .overlay-content-panel h3{font-size:16px;font-weight:bold;margin:0 0 10px 0;padding:0;text-transform:uppercase}
+.gallery .overlay-content-panel p{margin:0 0 5px 0}
+
+/* FILMSTRIP */
+.gallery .strip_background{}
+.gallery .strip_background_top{background:#000}
+.gallery .strip_background_bottom{background:#000}
+
+/* 'margin' will define top/bottom margin in completed gallery */
+.gallery  .filmstrip {margin:6px}
+
+/* FILMSTRIP FRAMES (contains both images and captions) */
+.gallery  .frame {}
+
+/* WRAPPER FOR FILMSTRIP IMAGES */
+.gallery  .frame .img_wrap { background:url(../../../../themes/control.png) no-repeat}
+.gallery  .frame .img_wrap .number{font-weight:bold;color:#797979}
+.gallery  .frame .img_wrap_hover{background:url(../../../../themes/control_over.png) no-repeat}
+
+/* WRAPPER FOR CURRENT FILMSTRIP IMAGE */
+.gallery  .frame.current .img_wrap { background:url(../../../../themes/control_active.png) no-repeat; color:#DBDBDB}
+.gallery  .frame.current .img_wrap .number{color:#DBDBDB}
+
+/* FRAME IMAGES */
+.gallery  .frame img { border: none; }
+
+.gallery .next_title {color:#FFF;text-transform:uppercase;font-size:15px;line-height:2em}
+.gallery .next_title_over {background:url(../../../../themes/comming.png) left no-repeat;} /* show background */
+
+/* POINTER FOR CURRENT FRAME */
+.gallery  .pointer {
+	border-color: #222;
+	display:none /* we don't need point */
+}
+
+/* GALLERY GRADIENT */
+.gallery .gallery_gradient{background:url(../../../../themes/gradient_top_bg.png) top repeat-x}
+.gallery .gallery_gradient div{width:100%;height:100%;background:url(../../../../themes/gradient_bottom_bg.png) bottom repeat-x;}
+.gallery .gallery_gradient div div{background:url(../../../../themes/gradient_left_bg.png) left repeat-y;}
+.gallery .gallery_gradient div div div{background:url(../../../../themes/gradient_right_bg.png) right repeat-y;}
+
+.hide{display:none}
+/* TRANSPARENT BORDER FIX FOR IE6 */
+/* NOTE - DO NOT CHANGE THIS RULE */
+*html .pointer {
+	filter: chroma(color=pink);
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.2" client="site">
+	<name>BJ Dropdown Menu</name>
+	<author>The ByJoomla Team</author>
+	<creationDate>5th April 2012</creationDate>
+	<copyright>Copyright (C) 2008 - 2012 The ByJoomla Team. All rights reserved.</copyright>
+	<license>GNU General Public License v3.0</license>
+	<authorEmail>admin@byjoomla.com</authorEmail>
+	<authorUrl>www.byjoomla.com</authorUrl>
+	<version>1.6.2</version>
+	<description>ByJoomla Dropdown Menu</description>
+	<files>
+		<filename module="mod_bj_dropdown_menu">mod_bj_dropdown_menu.php</filename>
+		<filename>bj_dropdown_menu.css</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>jquery.js</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>		
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="menutype" type="menu" default="mainmenu" label="Menu Name" description="The name of the menu (default is `mainmenu`)" />
+				<field name="legacy_mode" type="radio" default="0" label="Legacy Mode" description="Choosing `Yes` will use Joomla! default `#mainlevel` CSS selector for root &lt;ul&gt; tag and `#active_menu` for active menu item. Choosing `No` will allow the use of multiple list style menu instances and multiple active menu items in same page without the loss of xHTML compliance, but require modification on `template_css.css` file to include definition of `.list_menu` and `.active_mitem` CSS selectors">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="active_id" type="radio" default="1" label="Active Highlighting" description="Enable active menu item highlighting">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="full_active_id" type="radio" default="1" label="Full Active Highlighting" description="Enable full active menu item highlighting, including for `Link - Component Item` and `Link - Url`, which will require modification on `template_css.css` file to include definition of `.active_mitem` CSS selector">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="menu_images" type="radio" default="1" label="Menu Images">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="activate_parent" type="radio" default="1" label="Activate Parent" description="Enable active highlighting also for all parent menu items in the hierarchycal list menu">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="rootmenu_count" type="text" default="0" label="Root-menu Count" description="How many item of root-menu to display? Input 0 to display all root-menu items" />
+				<field name="submenu_deep" type="text" default="2" label="Sub-menu deep" description="How many level of sub-menu you want to show?" />
+				<field name="expand_all" type="radio" default="1" label="Expand All" description="Expand all sub-menus or just sub-menu of active root-menu item?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="need_jquery" type="radio" default="0" label="Need JQuery?" description="Choose 'No' if you are sure that JQuery is loaded elsewhere. Choose 'Yes' if you are sure that JQuery is not loaded elsewhere">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="animate_dropdown" type="radio" default="1" label="Animate Dropdown Menu" description="Animate Dropdown Menu">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="dropdown_opacity" type="text" default="0.9" label="Dropdown Menu Opacity" description="Dropdown Menu Opacity (not work on IE)" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="cache" type="radio" default="0" label="Enable Cache" description="Select whether to cache the content of this module">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="menuclass_sfx" type="text" default="" label="Menu Class Suffix" description="A suffix to be applied to the css class of the menu items" />
+			</fieldset>
+		</fields>		
+	</config>
+</extension>

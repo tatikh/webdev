@@ -1,0 +1,55 @@
+.venus-headline{
+	border:1px solid #41687D;
+	background:#194861;
+	padding:3px 10px;
+	color:#FFF;
+}
+.venus-headline .static,.venus-headline .control,.venus-headline .text{
+	float:left;
+}
+.venus-headline .static{
+	width:auto;
+}
+.venus-headline .control{
+	margin:0 0 0 10px;
+}
+.venus-headline .control .prev{
+	background:url(headline-prev.png) no-repeat;
+	padding:0px 8px;
+	cursor:pointer;
+}
+.venus-headline .control .next{
+	background:url(headline-next.png) no-repeat;
+	padding:0px 8px;
+	margin:0 0 0 3px;
+	cursor:pointer;
+}
+.venus-headline .text{
+	position:relative;
+	overflow:hidden;
+	height:18px;
+}
+.venus-headline .icon-star,.venus-headline .icon-love,.venus-headline .icon-thumb,.venus-headline .icon-warning,.venus-headline .icon-sticker{
+	padding:13px 13px 6px 13px;
+	margin:0 5px 0 10px;
+	float:left;
+}
+.venus-headline .icon-star{
+	background:url(headline-icons.png) left no-repeat;
+}
+.venus-headline .icon-love{
+	background:url(headline-icons.png) -30px 0 no-repeat;
+}
+.venus-headline .icon-thumb{
+	background:url(headline-icons.png) -60px 0 no-repeat;
+}
+.venus-headline .icon-warning{
+	background:url(headline-icons.png) -85px 0 no-repeat;
+}
+.venus-headline .icon-sticker{
+	background:url(headline-icons.png) -110px 0 no-repeat;
+}
+
+.venus-headline .text .content{
+	position:absolute;
+}

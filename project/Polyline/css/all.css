@@ -1,0 +1,339 @@
+
+
+body{
+	margin: 0 auto;
+	color: #fff;
+	font: 13px/13px GothamPro, arial;
+	min-width: 1200px;
+	background-color: #efefee;	
+}
+
+.wrapper{
+	margin: 0 auto;
+	margin-top: 50px;
+	color: #fff;
+	width: 960px;
+}
+
+/*start header*/
+.header{
+	overflow: hidden;
+}
+
+.header .logo a{
+	display: inline-block;
+	float: left;}
+
+.header .logo span{
+	font: 13px/13px GothamPro, arial;
+	color: #494949;
+	display: inline-block;
+	float: right;
+	padding-right: 10px;
+}
+
+.header .logo span.tel{
+	font: 29px GothamPro, arial;
+	color: #a21b36;
+    padding-bottom: 14px;
+    padding-right: 67px;
+    padding-top: 30px;
+}
+
+.logo{
+	height: 96px;
+	margin-bottom: 50px;
+}
+
+.fon-grey{
+	height: 16px;
+	background-color: #d9ddde;
+}
+
+.main-nav{
+	float: left;
+	background-color: #7b7b7b;
+	width: 100%;
+}
+
+.main-nav ul{
+	float: left;
+	margin: 0;
+	padding: 0 0 8px  136px;
+	list-style: none;
+}
+
+.main-nav ul li{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #7b7b7b;
+}
+
+.main-nav ul li a{
+	padding: 20px 18px 15px;
+	color: #fff;
+	font: 15px/34px GothamPro, arial;
+	text-transform: uppercase;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.main-nav ul li:hover a{
+	padding: 20px 18px 15px;
+	color: #9f1d34;
+	font: 15px/34px GothamPro, arial;
+	background-color: #d9ddde; 
+	display: inline-block;
+}
+
+.main-nav ul li:hover{
+	background-color: #d9ddde; 
+}
+
+/*end header*/
+
+/*start MAIN*/
+
+/*start Gallery*/
+.gallery{
+	width: 960px;
+	height: 345px;
+	background-color: #d9ddde;
+	overflow: hidden;
+	position: relative;
+	padding-top: 5px;
+}
+
+.gallery a.prev {
+    left: 0px;
+    position: absolute;
+    top: 138px;
+} /* свойства для кнопок прокрутки могут быть любыми */
+
+.gallery a.next {
+    right: 0px;
+    position: absolute;
+    top: 138px;
+} /* свойства для кнопок прокрутки могут быть любыми */
+
+
+.gallery .wrap {
+	width:960px;  /* ширина должна быть равна сумме длин видимых элементов прокрутки включая падинги.. */ 
+	overflow: visible;
+	position: relative;
+}
+
+.gallery .wrap ul {
+	position: relative; /* тут можно применить как relative так и absolute */
+	width: 99999px;  /* !!! */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.gallery .wrap ul.list li { /* для елементов прокрутки нельзя задавать margin */
+	background: url("../images/slide.png") no-repeat;
+	float:left;
+	width:960px;
+	height: 345px;
+}
+
+ul.list .slide1{position: relative;}
+
+ul.list .slide1 span.top-text{
+    background-color: #ffa205;
+    color: #fff;
+    display: inline-block;
+    font: 36px/24px GothamPro, arial;
+    margin-left: 168px;
+    margin-top: 204px;
+    padding: 15px 28px 14px 22px;
+}
+
+ul.list .slide1 span{
+    background-color: #93182f;
+    color: #fff;
+    display: inline-block;
+    font: 36px/21px GothamPro, arial;
+    margin-left: 227px;
+    padding: 9px 25px 14px 23px;
+}
+/*end Gallery*/
+
+
+.gal_menu{
+	height: 66px;
+	background-color: #93182f;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.gal_menu ul{
+	margin: 0;
+	padding: 5px 0 0 47px;
+	float: left;
+}
+
+.gal_menu ul.second-p{
+	padding: 0 0 0 95px;
+}
+
+.gal_menu ul.third-p{
+	padding: 0 0 0 155px;
+}
+
+.gal_menu ul li{
+	margin: 0;
+	padding: 0;
+	float: left;
+	padding-right: 10px;
+}
+
+.gal_menu ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font: 12px/18px GothamPro,arial;
+	color: #fff;
+	margin-right: 10px;
+}
+
+.gal_menu ul li a:hover{
+	color: #ffa205;
+
+}
+/*end MAIN*/
+
+/*start ScrollBlock*/
+.scrollable {
+	width: 960px; /* ширина контейнера */
+	height: 528px;
+	overflow:hidden;
+	margin-bottom: 36px;
+}
+
+.long {
+	width: 1920px; /* ширина контента в блоке с скролом */
+	height: 528px;
+}
+
+.wrapper .main div.scrollable .long .hscroll-bar{
+	top:509px;
+	height: 32px;
+}
+
+.hscroll-line{
+	background-color: #93182f;
+	height: 13px;
+}
+
+.hscroll-slider{
+	background-color: #7b7b7b;
+	height: 4px;
+}
+
+.wrapper div.scrollable div.hscroll-bar div.hscroll-left{
+	height: 32px;
+	width: 32px;
+	background-color: #93182f;
+	background-image: url("../images/button-left.png");
+}
+
+.scroll-content{
+	float: left;
+	width: 960px;
+	height: 480px;
+}
+
+.block1 {
+	float: left;
+	width: 471px;
+	padding-right: 9px;
+	border-bottom: 2px solid #93182f;
+}
+
+.block1 img{
+	float: left;
+	display: inline-block;
+	margin-right: 23px;
+}
+
+.block1 h4{
+	margin: 0;
+	padding: 0;
+	font: bold 17px/18px GothamPro, verdana, arial;
+	color: #3d3d3d;
+	text-transform: uppercase;
+	padding: 18px 0;
+}
+
+.block1 h4 span{
+	color: #93182f;
+	font: bold 17px/18px GothamPro, verdana, arial;
+}
+
+.block1 p{
+	margin: 0;
+	padding: 0;
+	font: 13px/18px verdana, arial;
+	color: #403b3b;
+}
+
+.block1 p span{
+	color: #93182f;
+	font: bold 13px/18px verdana, arial;
+}
+
+/*end ScrollBlock*/
+
+/*start NEWS-PUBLIC*/
+.news-public{
+	margin-bottom: 44px;
+	height: 450px;
+}
+
+.news{
+	width: 545px;
+	background-color: #fff;
+	padding: 36px 23px 0 21px;
+	float: left;
+	height: 412px;
+	border-bottom: 2px solid #93182f;
+}
+
+.box-news{
+	color: #403b3b;
+	font: 13px/18px verdana, arial;
+
+}
+
+.box-news span{
+	color: #3d3d3d;
+	font: 14px/18px verdana, arial;
+	display: block;
+	padding-bottom: 35px;
+}
+
+.box-news a{
+	color: #93182f;
+	font: bold 13px/18px verdana, arial;
+}
+
+.box-news p{
+	padding: 22px 0 46px 0;
+	margin: 0;
+}
+
+.dopinfo{
+	width: 240px;
+	height: 35px;
+	background-color: #93182f;
+	float: right;
+}
+
+.public{float: left;}
+
+
+
+/*end NEWS-PUBLIC*/

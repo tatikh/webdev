@@ -1,0 +1,65 @@
+/* ========================== LAYOUT DEFINITION ============================ */
+
+ul.list_menu{/* root-menu */display:block; list-style:none; position:relative; margin:0; padding:0; width:100%;z-index:51000}
+ul.list_menu li{/* root-menu items */float:left; display:block; position:relative;  width:auto; cursor:pointer;padding:0 1px 0 0}
+ul.list_menu li .mainlevel{/* root-menu items::link and placeholder */text-transform:uppercase; padding:12px 20px 10px 20px; display:block; font-weight:bold; cursor:pointer; }
+ul.list_menu li .mainlevel span{font-size:1.28em; display:block; font-weight:bold; float:left; clear:both; width:100%; margin:3px 0 3px 0; cursor:pointer}
+ul.list_menu li.sfhover, 
+ul.list_menu li.active_mitem{/* root-menu list items::hover and active state */display:block;}
+ul.list_menu li.active_mitem .mainlevel{/* root-menu link items::active state */display:block;}
+
+ul.list_menu li.sfhover .mainlevel{/* root-menu link items::hover state */}
+
+/* Dropdown */
+ul.list_menu li div.bg0{position:absolute; top:44px; width:200px; margin:0; padding:58px 0 0 0; z-index:51000; left:-999em; display:none;display:block;}
+ul.list_menu li div div.bg1{padding:0 0 59px 0}
+ul.list_menu li div div div.bg2{padding:0 0 15px 0}
+ul.list_menu li.sfhover div.bg0{left:0}
+
+ul.list_menu li ul{/* drop-down sub-menu */position:absolute;top:20px;margin:0px 20px 0 20px}
+ul.list_menu li.sfhover ul{/* drop-down sub-menu::active state */}
+
+/* pull-out sub-menu */
+ul.list_menu li ul div.bg0{margin:-40px 0 0 137px;display:none}
+ul.list_menu li.sfhover ul div.bg0,
+ul.list_menu li.sfhover ul ul  div.bg0, 
+ul.list_menu li.sfhover ul ul ul  div.bg0, 
+ul.list_menu li.sfhover ul ul ul ul  div.bg0{/* pull-out sub-menu::not active state */left:24px}
+
+ul.list_menu li li.sfhover  div.bg0,
+ul.list_menu li li li.sfhover  div.bg0,
+ul.list_menu li li li li.sfhover  div.bg0,
+ul.list_menu li li li li li.sfhover  div.bg0{/* pull-out sub-menu::active state */left:24px}
+
+
+ul.list_menu li li.sfhover{position:relative}
+
+/* Menu item */
+ul.list_menu li li, 
+ul.list_menu li li li, 
+ul.list_menu li li li li, 
+ul.list_menu li li li li li, 
+ul.list_menu li li li li li li{/* sub-menu items */display:block; width:160px; margin:0; padding:0; height:30px;background:none}
+ul.list_menu li li .sublevel,
+ul.list_menu li li.sfhover li .sublevel, 
+ul.list_menu li li.sfhover li li .sublevel, 
+ul.list_menu li li.sfhover li li li .sublevel, 
+ul.list_menu li li.sfhover li li li li .sublevel{/* sub-menu items::link and placeholder */display:block; margin:0; padding:8px 4px 8px 4px; height:13px; font-size:1em; background:none}
+ul.list_menu li li.sfhover .sublevel,
+ul.list_menu li li li.sfhover .sublevel, 
+ul.list_menu li li li li.sfhover .sublevel, 
+ul.list_menu li li li li li.sfhover .sublevel, 
+ul.list_menu li li li li li li.sfhover .sublevel, 
+ul.list_menu li li.active_mitem .sublevel, 
+ul.list_menu li li li.active_mitem .sublevel, 
+ul.list_menu li li li li.active_mitem .sublevel, 
+ul.list_menu li li li li li.active_mitem .sublevel, 
+ul.list_menu li li li li li li.active_mitem .sublevel{/* sub-menu items::hover and active state */text-decoration:none}
+
+/* ====================== COLOR DEFINITION =============================== */
+/* defined in template 
+ * Sample:
+ * ...
+ * ...
+ *
+*/

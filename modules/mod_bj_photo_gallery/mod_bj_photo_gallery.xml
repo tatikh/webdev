@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.6.2" client="site">
+    <name>BJ Photo Gallery</name>
+    <creationDate>5th April 2012</creationDate>
+    <author>The ByJoomla Team</author>
+    <copyright>Copyright (C) 2008 - 2012 The ByJoomla Team. All rights reserved.</copyright>
+    <authorEmail>admin@byjoomla.com</authorEmail>
+    <authorUrl>http://www.byjoomla.com</authorUrl>
+    <version>2.6.2</version>
+    <description>
+    	<![CDATA[
+    	Show images in a grid-style. Works only with BJ! Image Slider component
+	]]>
+    </description>
+     <files>         
+         <filename module="mod_bj_photo_gallery">mod_bj_photo_gallery.php</filename>
+         <folder>tmpl</folder>
+		 <filename>index.html</filename>
+		 <filename>helper.php</filename>
+		 <filename >elements/color.php</filename>
+		 <folder>media</folder>
+     </files>
+	 <config>
+		<fields name="params" addfieldpath="/modules/mod_bj_photo_gallery/elements">
+			<fieldset name="basic">
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />			
+			<field name="category_id" type="text" default="1" label="Category Id" description="Id of the Category that you want to show" />
+			<field name="item_count" type="text" default="3" label="Item count" description="Number of items in category that you want to show" />
+			<field name="main_image" type="radio" default="ORG" label="Which image to show as Main Image" description="Choose whether to use your original image or cutted image in the light box dialog">
+				<option value="ORG">Original Image</option>
+				<option value="CUT">Cutted Image</option>
+			</field>
+			<field name="columns" type="text" default="2" label="Columns" description="Number of item columns" />
+			<field name="background" type="color" default="FFFFFF" label="Background (hexa)" description="Background color of each image placeholder" />
+			<field name="padding" type="text" default="4" label="Padding (px)" description="Image placeholder padding" />
+			<field name="border_color" type="color" default="CCCCCC" label="Border Color (hexa)" description="Image placeholder border color" />
+			<field name="border_width" type="text" default="1" label="Border Width (px)" description="Image placeholder border witdh" />
+			<field name="margin" type="text" default="5" label="Margin (px)" description="Margin between Image placeholders" />
+			<field name="txtImage" type="text" default="Image" label="'Image' text" description="Set 'Image' text to your language" />
+			<field name="txtOf" type="text" default="of" label="'of' text" description="Set 'of' text to your language" />
+			<field name="need_jquery" type="radio" default="0" label="Need JQuery" description="Choose 'No' if you are sure that JQuery is loaded elsewhere. Choose 'Yes' if you are sure that JQuery is not loaded elsewhere">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+    </fieldset>
+	<fieldset name="Advance" label="Advance options">
+		<field name="facebook_id" type="text" default="" label="Facebook App Id" description="Facebook Application ID. To disable Facebook Comments on images, leave this blank. To get your App-ID, please see this tutorial: http://byjoomla.com/" />
+		<field name="facebook_language" type="text" default="" label="Comment box language" description="Code of language. Facebook locales follow ISO language and country codes respectively, concatenated by an underscore. The basic format is ''ll_CC'', where ''ll'' is a two-letter language code, and ''CC'' is a two-letter country code. For instance, 'en_US' represents US English. See here: http://www.loc.gov/standards/iso639-2/php/code_list.php for ISO Language and here: http://en.wikipedia.org/wiki/ISO_3166-1 for country codes." />
+		<field name="comment_width" type="text" default="260" label="Comments Box Width" description="Width of the comment box. Enter number only"/>
+	</fieldset>
+		</fields>		
+	</config>
+</extension>

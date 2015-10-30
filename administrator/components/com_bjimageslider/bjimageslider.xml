@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>BJ Image Slider</name>
+	<author>The ByJoomla Team</author>
+	<creationDate>14th March 2011</creationDate>
+	<copyright>(C) 2008-2011 BYJoomla.com. All rights reserved.</copyright>
+	<authorEmail>admin@byjoomla.com</authorEmail>
+	<authorUrl>www.byjoomla.com</authorUrl>
+	<version>1.6.0</version>
+	<description><![CDATA[
+<img src="../components/com_bjimageslider/bj_imageslider.png" style="margin-right: 1em; float: left" />
+<p>This component works as back-end photo manager for BJ! Image Slider modules. Checkout our advanced photos and images presentation modules BJ! Image Slider (mootools version) and BJ! Image Slider 2 (jQuery version) at <a href="http://byjoomla.com">ByJooma.com</a></p>
+</p>
+]]></description>
+	<install> <!-- Runs on install -->
+		<sql>
+				<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+			<sql>
+					<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+			</sql>
+	</uninstall>
+		<files folder="site">
+                <filename>index.html</filename>
+                <filename>bj_imageslider.png</filename>
+        </files>
+  <administration>
+    <menu>BJ Image Slider</menu>
+	  <submenu>
+	    <menu view="configuration">Configuration</menu>
+	    <menu view="categories">Manage Categories</menu>
+	    <menu view="photos">Manage Images</menu>
+	  </submenu>
+    <files folder="admin">
+	  	<folder>controllers</folder>
+		<folder>sql</folder>
+	  	<folder>views</folder>
+	  	<folder>models</folder>
+	  	<folder>tables</folder>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>configuration.php</filename>
+		<filename>bjimageslider.php</filename>
+    </files>
+	<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_bjimageslider.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_bjimageslider.sys.ini</language>
+	</languages>
+  </administration>
+</extension>

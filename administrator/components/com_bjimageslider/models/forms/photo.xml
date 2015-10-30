@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset>
+                <field
+                        name="id"
+                        type="hidden"
+                />
+                <field
+                        name="name"
+                        type="text"
+                        label="COM_BJIMAGESLIDER_PHOTO_NAME_LABEL"
+                        description="COM_BJIMAGESLIDER_PHOTO_NAME_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+						required="true"
+                />
+				<field
+                        name="cssclass"
+                        type="text"
+                        label="COM_BJIMAGESLIDER_PHOTO_CSSCLASS_LABEL"
+                        description="COM_BJIMAGESLIDER_PHOTO_CSSCLASS_DESC"
+                        size="20"
+                        class="inputbox"
+                        default=""
+                />
+				<field
+                        name="link"
+                        type="text"
+                        label="COM_BJIMAGESLIDER_PHOTO_LINK_LABEL"
+                        description="COM_BJIMAGESLIDER_PHOTO_LINK_DESC"
+                        size="60"
+                        class="inputbox"
+                        default=""
+                />
+				<field
+                        name="description"
+                        type="editor"
+                        label="COM_BJIMAGESLIDER_PHOTO_DESC_LABEL"
+                        description="COM_BJIMAGESLIDER_PHOTO_DESC_DESC"
+                        class="inputbox"
+                />
+				<field name="published" type="list" label="Published"
+			description="Published" class="inputbox" size="1" default="1">
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+		</field>
+		
+        </fieldset>
+</form>

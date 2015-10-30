@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.6.0" client="site">
+    <name>BJ Headline Roller</name>
+    <creationDate>12th February 2011</creationDate>
+    <author>ByJoomla.com</author>
+    <copyright>(C) 2008-2010 BYJoomla.com. All rights reserved.</copyright>
+    <authorEmail>admin@byjoomla.com</authorEmail>
+    <authorUrl>http://www.byjoomla.com</authorUrl>
+    <version>2.6.0</version>
+    <description>
+    	<![CDATA[
+    	Articles will be shown in a headline roller.
+	]]>
+    </description>
+     <files>         
+         <filename module="mod_bj_headline_roller">mod_bj_headline_roller.php</filename>
+         <filename >tmpl/default.php</filename>
+		 <filename >tmpl/index.html</filename>
+		 <filename >index.html</filename>
+		 <filename >helper.php</filename>
+         <filename >media/js/jquery-1.4.2.js</filename>
+		 <filename >media/js/jquery-headline.js</filename>
+		 <filename >media/js/jquery-headline-full.js</filename>
+		 <filename >media/themes/venus/headline-next.png</filename>
+		 <filename >media/themes/venus/headline-prev.png</filename>
+		 <filename >media/themes/venus/headline-icons.png</filename>
+		 <filename >media/themes/venus/venus.css</filename>
+     </files>
+	
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+    	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />    	
+        <field name="category_id" extension="com_content" type="category" multiple="true" default="" label="Categories" description="Sources of articles">
+			<option value="">JOPTION_ALL_CATEGORIES</option>
+		</field>
+        <field name="item_count" type="text" default="3" label="Item count" description="Number of items in category that you want to show" />
+		<field name="order_by" type="list" default="0" label="Tab Order" description="Tab should be ordered by what property?">
+			<option value="0">Latest Created first</option>
+			<option value="1">Oldest Created first</option>
+			<option value="2">Smallest Ordering first</option>
+			<option value="3">Biggest Ordering first</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="Roller" description="Roller fieldeters" />
+		<field name="headline_type" type="list" default="title" label="Headline Type" description="Which article property should be shown as headline">
+			<option value="title">Article Title</option>
+			<option value="intro">Article Intro text</option>
+		</field>
+		<field name="headline_link" type="radio" default="1" label="Headline Link" description="Link headline to article?">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		<field name="headline_icon_show" type="list" default="1" label="Show Icon" description="Way of showing Icon">
+			<option value="1">Only One</option>
+			<option value="0">All (random)</option>
+		</field>
+		<field name="headline_icon" type="list" default="star" label="Headline Icon" description="Icon to show before headline">
+			<option value="star">STAR</option>
+			<option value="love">LOVE</option>
+			<option value="thumb">THUMB UP</option>
+			<option value="warning">WARNING</option>
+			<option value="sticker">STICKER</option>
+		</field>
+		<field name="static_text" type="text" default="Headlines:" label="Static text" description="The static text on the headline roller" />
+		<field name="roller_interval" type="text" default="5000" label="Headline Switching Interval" description="Interval between each headline" />
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="need_jquery" type="radio" default="0" label="Need jQuery?" description="Need jQuery library? If you use this module in a template which does not support jQuery, please choose Yes. Otherwise, choose No">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+			</fieldset>
+		</fields>		
+    </config>
+</extension>
